@@ -76,6 +76,9 @@ public class _1606_Main {
   
   
   // WAP to print college details by taking user input
+  
+    input.close();
+
     
   }
 }
