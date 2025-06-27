@@ -50,4 +50,55 @@ int main()
     // Static Array
     int arr[] = {1, 2, 3, 4, 5};      // Static array of integers
     double darr[] = {11.1, 2.2, 3.3}; // Static array of doubles
+    char chararr[] = {'a', 'b', '1'}; // Static array of characters
+    // Note: Static array is an array with a fixed size, which is defined at compile time
+
+    int arr[5];             // [0, 0, 0, 0, 0]
+    printf("%d\n", arr[0]); // output => 0
+    arr[0] = 1;             // [1, 0, 0, 0, 0]
+    arr[1] = 2;             // [1, 2, 0, 0, 0]
+
+    printf("%d\n", arr[0]); // output => 1
+    printf("%d\n", arr[3]); // output => 0
+
+    printf("=========== loop ===========\n");
+    // loop
+    // Syntax of for loop
+    // for(initialization; condition; increament/decrement) {// body}
+
+    for (int i = 0; i <= 10; i++) // i = 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+    {
+        printf("%i ", i); // output => 0 1 2 3 4 5 6 7 8 9 10
+    }
+    printf("\n");
+
+    // Syntax of while loop
+    /*
+
+    initialization => 1
+    while(condition) { => 2
+      // body => 4
+      // increament/decrement => 3
+    }
+    */
+
+    int i = 0;
+    while (i <= 10)
+    {
+        printf("%d ", i); // output => 0 1 2 3 4 5 6 7 8 9 10
+        i++;              // i = i + 1; // increament
+    }
+
+    // WAP to store 1000 numbers in an integer array
+    int arr[1000]; // Declare an array of size 1000
+
+    for (int i = 0; i < 1000; i++)
+    {
+        arr[i] = i + 1; // [1,2,3,4,...,999,1000] || // Initialize the array with numbers from 1 to 1000
+    }
+
+    for (int i = 0; i < 1000; i++)
+    {
+        printf("%d ", arr[i]); // Output the array elements
+    }
 }
