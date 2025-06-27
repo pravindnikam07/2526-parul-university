@@ -371,6 +371,26 @@ printf("%d", numbers[2]);  // Output: 30
 
 This prints the value at index 2 (which is 30).
 
+### Format Specifier
+
+| Format Specifier | Description                          | Example Output               |
+| ---------------- | ------------------------------------ | ---------------------------- |
+| `%d` or `%i`     | Signed decimal integer               | `42`, `-7`                   |
+| `%u`             | Unsigned decimal integer             | `42` (only positive numbers) |
+| `%o`             | Unsigned octal number                | `52` (octal representation)  |
+| `%x`             | Unsigned hexadecimal (lowercase)     | `2a`                         |
+| `%X`             | Unsigned hexadecimal (uppercase)     | `2A`                         |
+| `%f`             | Decimal floating point               | `3.14159`                    |
+| `%F`             | Decimal floating point (uppercase)   | `3.14159`                    |
+| `%e`             | Scientific notation (lowercase)      | `3.14e+00`                   |
+| `%E`             | Scientific notation (uppercase)      | `3.14E+00`                   |
+| `%g`             | Use `%f` or `%e` (whichever shorter) | `3.14` or `3.14e+00`         |
+| `%G`             | Use `%F` or `%E` (uppercase)         | `3.14` or `3.14E+00`         |
+| `%c`             | Single character                     | `A`                          |
+| `%s`             | String of characters                 | `Hello`                      |
+| `%p`             | Pointer address                      | `0x7ffeefbff5c8`             |
+| `%%`             | A literal `%` character              | `%`                          |
+
 ### 📌 Static vs. Dynamic Arrays
 
 | Type              | Explanation                         | Example                                |
