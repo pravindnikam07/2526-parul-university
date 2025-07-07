@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 public class _0707_1_Experiment3 {
 
+    // Write a Java program that uses loops to take multiple student’s marks,
+    // determines grades using if-else, and provides remarks using switch-case.
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
@@ -66,7 +68,7 @@ public class _0707_1_Experiment3 {
             //     default:
             //         System.out.println("Invalid marks entered. Please enter a value between 0 and 100.");
             // }
-            // swtich case with lambda expression (after java 8)
+            // swtich case with lambda expression (after java)
             switch (grade) {
                 case 'O' ->
                     System.out.println("Outstanding");
