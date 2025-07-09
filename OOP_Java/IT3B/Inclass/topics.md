@@ -28,3 +28,23 @@
     - else if
     - else
     - switch
+
+## 08/07/2025
+
+### Iterative statements
+
+    - for
+    - while
+    - do while
+    - Enhanced for loop (for each loop)
+
+### Constructor and methods
+
+    - constructor
+        - default constructor
+        - parameterize constructor
+        - constructor overloading
+    - methods
+        - static methods
+        - non static method
+        - method overloading
