@@ -8,6 +8,19 @@ struct Node
   struct Node *next;
 };
 
+void traverse(struct Node *head)
+{
+  struct Node *current = head;
+
+  while (current != NULL)
+  {
+    printf("%d -> ", current->data);
+    current = current->next;
+  }
+  printf("NULL\n");
+  return;
+}
+
 void insertAtEnd(struct Node *head, int new_data)
 {
   // create new node
@@ -28,16 +41,30 @@ void insertAtEnd(struct Node *head, int new_data)
   return;
 }
 
-void traverse(struct Node *head)
+void insertAgBegining(struct Node **head, int new_data)
+{
+  struct Node *new_node = (struct Node *)malloc(sizeof(struct Node));
+  new_node->data = new_data;
+  new_node->next = *head;
+  *head = new_node;
+
+  traverse(*head);
+}
+
+// searching the element in the linked list
+void searchElement(struct Node *head, int search_element)
 {
   struct Node *current = head;
-
   while (current != NULL)
   {
-    printf("%d -> ", current->data);
+    if (current->data == search_element)
+    {
+      printf("Element %d found\n", search_element);
+      return;
+    }
     current = current->next;
   }
-  printf("NULL\n");
+  printf("Element %d not found\n", search_element);
   return;
 }
 
@@ -62,4 +89,10 @@ int main()
   insertAtEnd(head, 5);
 
   traverse(head);
+
+  insertAgBegining(&head, 0);
+  traverse(head);
+
+  searchElement(head, 4);
+  searchElement(head, 2);
 }
