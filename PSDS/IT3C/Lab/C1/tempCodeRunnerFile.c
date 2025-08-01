@@ -1,2 +1,1 @@
-lement(head, 4);
-  // searchEle
+p == N
