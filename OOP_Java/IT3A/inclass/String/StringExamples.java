@@ -31,5 +31,7 @@ public class StringExamples {
     System.out.println("Str length is : "+ str.length());
     System.out.println("Character at index 1 is : " + str.charAt(1));
 
+    
+
   }
 }
