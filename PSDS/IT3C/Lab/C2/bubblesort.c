@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
+// Function to print integer array
 void printArray(int arr[], int n)
 {
   for (int i = 0; i < n; i++)
@@ -10,11 +12,22 @@ void printArray(int arr[], int n)
   printf("\n");
 }
 
+// Function to print character array
 void printCharArray(char arr[], int n)
 {
   for (int i = 0; i < n; i++)
   {
     printf("%c ", arr[i]);
+  }
+  printf("\n");
+}
+
+// Function to print string array
+void printStringArray(char arr[][100], int n)
+{
+  for (int i = 0; i < n; i++)
+  {
+    printf("%s ", arr[i]);
   }
   printf("\n");
 }
@@ -37,6 +50,7 @@ void bubbleSort(int arr[], int n)
   }
 }
 
+// bubble sort function for char (stable sorting)
 void bubbleSortChar(char arr[], int n)
 {
   for (int i = 0; i < n - 1; i++)
@@ -50,7 +64,25 @@ void bubbleSortChar(char arr[], int n)
         arr[j + 1] = temp;
       }
     }
+  }
+}
 
+// bubble sort function for strings (stable sorting)
+void bubbleSortStrings(char arr[][100], int n)
+{
+  for (int i = 0; i < n - 1; i++)
+  {
+    for (int j = 0; j < n - i - 1; j++)
+    {
+      if (strcmp(arr[j], arr[j + 1]) > 0)
+      {
+        char temp[100];
+        strcpy(temp, arr[j]);
+        strcpy(arr[j], arr[j + 1]);
+        strcpy(arr[j + 1], temp);
+      }
+    }
+    printStringArray(arr, n); // Print array after each pass
   }
 }
 
@@ -72,5 +104,14 @@ int main()
   bubbleSortChar(arr2, m);
   printf("Sorted char array: \n");
   printCharArray(arr2, m);
+
+  printf("\nBubble Sort for Strings:\n");
+  char arr5[][100] = {"banana", "apple", "orange", "grape", "kiwi"};
+  int r = sizeof(arr5) / sizeof(arr5[0]);
+  printf("Unsorted array: \n");
+  printStringArray(arr5, r);
+  bubbleSortStrings(arr5, r);
+  printf("Sorted array: \n");
+  printStringArray(arr5, r);
   return 0;
 }
