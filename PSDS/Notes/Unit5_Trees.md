@@ -42,27 +42,175 @@ Example:
 
 ## 🌲 3. Types of Trees
 
-### 🔹 Binary Tree
+---
 
-- Each node has **at most 2 children** → `Left` and `Right`.
+## 1. **General Tree**
 
-### 🔹 Binary Search Tree (BST)
+- A node can have **any number of children**.
+- Example: A family tree or company hierarchy.
 
-- A special Binary Tree.
-- Rule:
+```
+         A
+      /  |  \
+     B   C   D
+        / \
+       E   F
+```
+
+---
+
+## 2. **Binary Tree**
+
+- Each node has **at most 2 children**: **Left** and **Right**.
+
+```
+        A
+       / \
+      B   C
+     / \
+    D   E
+```
+
+---
+
+## 3. **Full Binary Tree**
+
+- Every node has either **0 or 2 children**.
+- No node has only one child.
+
+```
+        A
+       / \
+      B   C
+     / \
+    D   E
+```
+
+---
+
+## 4. **Complete Binary Tree**
+
+- All levels are completely filled **except possibly the last**.
+- The last level is filled from **left to right**.
+
+```
+        A
+       / \
+      B   C
+     / \  /
+    D  E F
+```
+
+---
+
+## 5. **Perfect Binary Tree**
+
+- All **internal nodes have 2 children**.
+- All **leaf nodes are at the same level**.
+
+```
+        A
+       / \
+      B   C
+     / \ / \
+    D  E F  G
+```
+
+---
+
+## 6. **Binary Search Tree (BST)**
+
+- Special Binary Tree with ordering rule:
 
   - Left child < Parent
   - Right child > Parent
 
-### 🔹 AVL Tree
+```
+        50
+       /  \
+     30    70
+    / \   / \
+  20  40 60  80
+```
+
+---
+
+## 7. **AVL Tree (Balanced BST)**
 
 - A **self-balancing BST**.
-- Keeps tree height balanced for **fast searching**.
+- Height difference between left & right subtree ≤ 1.
+- Ensures **fast searching (O(log n))**.
 
-### 🔹 Red-Black Tree
+---
 
-- Another type of **balanced BST**.
-- Used in **libraries, OS, databases** for efficient searching.
+## 8. **Red-Black Tree**
+
+- A **balanced BST** with nodes colored **Red or Black**.
+- Maintains balance using **coloring rules**.
+- Used in **databases, OS, libraries**.
+
+---
+
+## 9. **Threaded Binary Tree**
+
+- Special Binary Tree that makes **traversal faster**.
+- Unused pointers are replaced with **links to next node**.
+
+---
+
+## 10. **Expression Tree**
+
+- A binary tree used to represent **mathematical expressions**.
+- Operators → Internal nodes, Operands → Leaf nodes.
+
+Example: Expression `(a + b) * c`
+
+```
+        *
+       / \
+      +   c
+     / \
+    a   b
+```
+
+---
+
+## 11. **B-Tree**
+
+- A **multi-way search tree**.
+- Used in **databases & file systems**.
+- Stores large amounts of data efficiently.
+
+---
+
+## 12. **Heap Tree**
+
+- A **complete binary tree**.
+- Types:
+
+  - **Max Heap** → Parent ≥ children
+  - **Min Heap** → Parent ≤ children
+
+- Used in **priority queues**.
+
+---
+
+## 📑 Summary Table
+
+| Tree Type            | Special Property              | Example Use |
+| -------------------- | ----------------------------- | ----------- |
+| General Tree         | Any number of children        | Family tree |
+| Binary Tree          | Max 2 children                | Basic DS    |
+| Full Binary Tree     | 0 or 2 children only          | Structure   |
+| Complete Binary Tree | Filled left to right          | Heap        |
+| Perfect Binary Tree  | All leaves at same level      | Ideal case  |
+| BST                  | Ordered left < root < right   | Searching   |
+| AVL Tree             | Balanced BST (height ≤1 diff) | Fast search |
+| Red-Black Tree       | Balanced with colors          | Databases   |
+| Threaded Tree        | Fast traversal using links    | Memory save |
+| Expression Tree      | Represents math expressions   | Compilers   |
+| B-Tree               | Multi-way search              | Databases   |
+| Heap Tree            | Min/Max property              | Priority Q  |
 
 ---
 
